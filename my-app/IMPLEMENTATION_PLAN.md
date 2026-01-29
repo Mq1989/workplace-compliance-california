@@ -54,7 +54,7 @@
 - [x] **Task 10.2** — Create email service (`lib/email/sendReminder.js`) and cron reminder route (`app/api/cron/reminders/route.js`)
 
 ## Phase 11: Stripe Billing
-- [ ] **Task 11.1** — Create Stripe webhook handler (`app/api/webhooks/stripe/route.js`)
+- [x] **Task 11.1** — Create Stripe webhook handler (`app/api/webhooks/stripe/route.js`)
 - [ ] **Task 11.2** — Build billing page (`app/(dashboard)/billing/page.js`)
 
 ## Phase 12: Settings & Polish
