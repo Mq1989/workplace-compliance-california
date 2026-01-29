@@ -47,7 +47,7 @@
 
 ## Phase 9: Training Records
 - [x] **Task 9.1** — Create Training API routes (`app/api/training/route.js`)
-- [ ] **Task 9.2** — Build Training dashboard page (`app/(dashboard)/training/page.js`) and records page (`app/(dashboard)/training/records/page.js`)
+- [x] **Task 9.2** — Build Training dashboard page (`app/(dashboard)/training/page.js`) and records page (`app/(dashboard)/training/records/page.js`)
 
 ## Phase 10: Webhooks & Email
 - [ ] **Task 10.1** — Create Clerk webhook handler (`app/api/webhooks/clerk/route.js`)
