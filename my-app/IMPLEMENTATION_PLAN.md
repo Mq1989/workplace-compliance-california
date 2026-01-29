@@ -24,7 +24,7 @@
 - [x] **Task 4.1** — Create Plans API routes: `app/api/plans/route.js` (GET, POST), `app/api/plans/[planId]/route.js` (GET, PUT), `app/api/plans/[planId]/publish/route.js` (POST)
 - [x] **Task 4.2** — Build Plans list page (`app/(dashboard)/plans/page.js`) showing all plans with status badges
 - [x] **Task 4.3** — Build WVPP Creation Wizard (`app/(dashboard)/plans/new/page.js` + `components/forms/PlanWizard.js`) — Steps 1-5 (Responsible Persons, Employee Involvement, Communication, Emergency Response, Hazard Assessment)
-- [ ] **Task 4.4** — Build WVPP Creation Wizard Steps 6-11 (Post-Incident, Training Program, Recordkeeping, Review Schedule, Authorization, Review & Publish)
+- [x] **Task 4.4** — Build WVPP Creation Wizard Steps 6-11 (Post-Incident, Training Program, Recordkeeping, Review Schedule, Authorization, Review & Publish)
 - [ ] **Task 4.5** — Build Plan view/edit page (`app/(dashboard)/plans/[planId]/page.js`)
 
 ## Phase 5: PDF Generation
