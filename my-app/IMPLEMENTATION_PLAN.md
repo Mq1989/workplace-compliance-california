@@ -21,7 +21,7 @@
 - [x] **Task 3.2** — Build onboarding flow page: multi-step form for company name, address, industry, employee count, workplace type
 
 ## Phase 4: WVPP Plan CRUD & Wizard
-- [ ] **Task 4.1** — Create Plans API routes: `app/api/plans/route.js` (GET, POST), `app/api/plans/[planId]/route.js` (GET, PUT), `app/api/plans/[planId]/publish/route.js` (POST)
+- [x] **Task 4.1** — Create Plans API routes: `app/api/plans/route.js` (GET, POST), `app/api/plans/[planId]/route.js` (GET, PUT), `app/api/plans/[planId]/publish/route.js` (POST)
 - [ ] **Task 4.2** — Build Plans list page (`app/(dashboard)/plans/page.js`) showing all plans with status badges
 - [ ] **Task 4.3** — Build WVPP Creation Wizard (`app/(dashboard)/plans/new/page.js` + `components/forms/PlanWizard.js`) — Steps 1-5 (Responsible Persons, Employee Involvement, Communication, Emergency Response, Hazard Assessment)
 - [ ] **Task 4.4** — Build WVPP Creation Wizard Steps 6-11 (Post-Incident, Training Program, Recordkeeping, Review Schedule, Authorization, Review & Publish)
