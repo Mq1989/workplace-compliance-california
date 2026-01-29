@@ -14,7 +14,7 @@
 ## Phase 2: Layout & Navigation
 - [x] **Task 2.1** — Build root layout (`app/layout.js`) with ClerkProvider and global styles
 - [x] **Task 2.2** — Build dashboard layout (`app/(dashboard)/layout.js`) with sidebar navigation (Plans, Training, Incidents, Employees, Settings, Billing) and top bar with user button
-- [ ] **Task 2.3** — Build marketing landing page (`app/page.js`) with hero, features, pricing, and CTA
+- [x] **Task 2.3** — Build marketing landing page (`app/page.js`) with hero, features, pricing, and CTA
 
 ## Phase 3: Organization Onboarding
 - [ ] **Task 3.1** — Create Organization API route (`app/api/organizations/route.js`) with GET and POST
