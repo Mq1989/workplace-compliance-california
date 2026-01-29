@@ -59,4 +59,4 @@
 
 ## Phase 12: Settings & Polish
 - [x] **Task 12.1** — Build settings page (`app/(dashboard)/settings/page.js`)
-- [ ] **Task 12.2** — Final QA: ensure build passes, lint clean, all pages render
+- [x] **Task 12.2** — Final QA: ensure build passes, lint clean, all pages render
