@@ -7,7 +7,7 @@
 - [x] **Task 0.4** — Create `lib/utils.js` with `cn()` helper for Tailwind class merging
 
 ## Phase 1: Authentication & Database
-- [ ] **Task 1.1** — Configure Clerk: install, add environment variables, create `middleware.js`, wrap root layout with `ClerkProvider`, create sign-in and sign-up pages
+- [x] **Task 1.1** — Configure Clerk: install, add environment variables, create `proxy.js`, wrap root layout with `ClerkProvider`, create sign-in and sign-up pages
 - [ ] **Task 1.2** — Set up MongoDB connection singleton (`lib/db.js`)
 - [ ] **Task 1.3** — Create Mongoose models: Organization, Plan, Incident, Employee, TrainingRecord, AuditLog
 

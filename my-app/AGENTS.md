@@ -16,7 +16,8 @@
 - **ESLint 9** with flat config (`eslint.config.mjs`), not legacy `.eslintrc`.
 - **Build warning**: Turbopack warns about multiple lockfiles (root + my-app). Not blocking but may need `turbopack.root` config later.
 - **shadcn/ui theming**: Uses oklch color space CSS variables mapped via `@theme inline` in `globals.css`. All colors defined as `--color-*` Tailwind theme tokens.
-- **Environment variables**: Template in `.env.example`. Clerk, MongoDB, Stripe, Resend, Vercel Blob all need keys before auth/db tasks.
+- **Environment variables**: Template in `.env.example`. Clerk, MongoDB, Stripe, Resend, Vercel Blob all need keys before auth/db tasks. A `.env.local` with a valid-format `pk_test_` key is required for `npm run build` to succeed (Clerk validates key format at build time during static page prerendering).
+- **Next.js 16 proxy convention**: `middleware.js` is deprecated in Next.js 16. Use `proxy.js` at project root instead. The API is identical — same `clerkMiddleware`, `createRouteMatcher` imports from `@clerk/nextjs/server`. Clerk v6 supports this naming natively.
 
 ## Codebase Patterns
 - **Class merging**: Use `cn()` from `@/lib/utils` for conditional Tailwind classes (wraps clsx + tailwind-merge).
@@ -25,3 +26,4 @@
 - **Component library**: Radix UI primitives installed for building shadcn/ui-style components in `components/ui/`.
 - **Constants**: All enums, industry hazard data, and subscription plan definitions live in `constants/index.js`. Import from `@/constants` using named exports.
 - **UI components**: All shadcn/ui primitives live in `components/ui/`. Import like `import { Button } from "@/components/ui/button"`. Components that use Radix interactivity (Select, Checkbox, Switch, Tabs, Dialog, Toast, Progress, RadioGroup, Separator, DropdownMenu) are marked `"use client"`. Button, Input, Label, Card, Textarea are server-compatible (no `"use client"` directive). Also includes a Textarea component as a bonus beyond the original 14.
+- **Clerk auth**: `@clerk/nextjs` v6.37.0. `ClerkProvider` wraps `<html>` in root `app/layout.js`. Auth pages use catch-all routes at `app/(auth)/sign-in/[[...sign-in]]/page.js` and `app/(auth)/sign-up/[[...sign-up]]/page.js`. Route protection via `proxy.js` using `clerkMiddleware` + `createRouteMatcher`. Public routes: `/`, `/sign-in(.*)`, `/sign-up(.*)`, `/api/webhooks(.*)`, `/api/cron(.*)`. Import `auth` from `@clerk/nextjs/server` for server-side auth checks in API routes.
