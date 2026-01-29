@@ -18,7 +18,7 @@
 
 ## Phase 3: Organization Onboarding
 - [x] **Task 3.1** — Create Organization API route (`app/api/organizations/route.js`) with GET and POST
-- [ ] **Task 3.2** — Build onboarding flow page: multi-step form for company name, address, industry, employee count, workplace type
+- [x] **Task 3.2** — Build onboarding flow page: multi-step form for company name, address, industry, employee count, workplace type
 
 ## Phase 4: WVPP Plan CRUD & Wizard
 - [ ] **Task 4.1** — Create Plans API routes: `app/api/plans/route.js` (GET, POST), `app/api/plans/[planId]/route.js` (GET, PUT), `app/api/plans/[planId]/publish/route.js` (POST)
