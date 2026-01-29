@@ -20,6 +20,7 @@ const AuditLogSchema = new mongoose.Schema({
       'incident_updated',
       'training_completed',
       'employee_added',
+      'employee_updated',
       'employee_removed',
       'document_exported',
       'settings_changed'
