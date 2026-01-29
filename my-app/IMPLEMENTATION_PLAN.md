@@ -17,7 +17,7 @@
 - [x] **Task 2.3** — Build marketing landing page (`app/page.js`) with hero, features, pricing, and CTA
 
 ## Phase 3: Organization Onboarding
-- [ ] **Task 3.1** — Create Organization API route (`app/api/organizations/route.js`) with GET and POST
+- [x] **Task 3.1** — Create Organization API route (`app/api/organizations/route.js`) with GET and POST
 - [ ] **Task 3.2** — Build onboarding flow page: multi-step form for company name, address, industry, employee count, workplace type
 
 ## Phase 4: WVPP Plan CRUD & Wizard
