@@ -41,7 +41,7 @@
 - [x] **Task 7.4** — Build Incident detail page (`app/(dashboard)/incidents/[incidentId]/page.js`)
 
 ## Phase 8: Employee Management
-- [ ] **Task 8.1** — Create Employees API routes (`app/api/employees/route.js` + `app/api/employees/[employeeId]/route.js`)
+- [x] **Task 8.1** — Create Employees API routes (`app/api/employees/route.js` + `app/api/employees/[employeeId]/route.js`)
 - [ ] **Task 8.2** — Build Employee roster page (`app/(dashboard)/employees/page.js`) + add form (`components/forms/EmployeeForm.js`)
 - [ ] **Task 8.3** — Build Employee detail page (`app/(dashboard)/employees/[employeeId]/page.js`)
 
