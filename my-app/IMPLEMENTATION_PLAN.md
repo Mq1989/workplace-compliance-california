@@ -36,7 +36,7 @@
 
 ## Phase 7: Incident Logging
 - [x] **Task 7.1** — Create Incidents API routes (`app/api/incidents/route.js` + `app/api/incidents/[incidentId]/route.js`)
-- [ ] **Task 7.2** — Build Incident list page (`app/(dashboard)/incidents/page.js`)
+- [x] **Task 7.2** — Build Incident list page (`app/(dashboard)/incidents/page.js`)
 - [ ] **Task 7.3** — Build Incident form (`app/(dashboard)/incidents/new/page.js` + `components/forms/IncidentForm.js`)
 - [ ] **Task 7.4** — Build Incident detail page (`app/(dashboard)/incidents/[incidentId]/page.js`)
 
