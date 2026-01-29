@@ -25,7 +25,7 @@
 - [x] **Task 4.2** — Build Plans list page (`app/(dashboard)/plans/page.js`) showing all plans with status badges
 - [x] **Task 4.3** — Build WVPP Creation Wizard (`app/(dashboard)/plans/new/page.js` + `components/forms/PlanWizard.js`) — Steps 1-5 (Responsible Persons, Employee Involvement, Communication, Emergency Response, Hazard Assessment)
 - [x] **Task 4.4** — Build WVPP Creation Wizard Steps 6-11 (Post-Incident, Training Program, Recordkeeping, Review Schedule, Authorization, Review & Publish)
-- [ ] **Task 4.5** — Build Plan view/edit page (`app/(dashboard)/plans/[planId]/page.js`)
+- [x] **Task 4.5** — Build Plan view/edit page (`app/(dashboard)/plans/[planId]/page.js`)
 
 ## Phase 5: PDF Generation
 - [ ] **Task 5.1** — Implement `lib/pdf/generateWVPP.js` with full WVPP document generation
