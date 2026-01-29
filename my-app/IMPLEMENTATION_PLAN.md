@@ -32,7 +32,7 @@
 - [x] **Task 5.2** — Create PDF export API route (`app/api/plans/[planId]/pdf/route.js`)
 
 ## Phase 6: Dashboard
-- [ ] **Task 6.1** — Build dashboard home page (`app/(dashboard)/dashboard/page.js`) with compliance score, upcoming deadlines, recent activity, quick actions
+- [x] **Task 6.1** — Build dashboard home page (`app/(dashboard)/dashboard/page.js`) with compliance score, upcoming deadlines, recent activity, quick actions
 
 ## Phase 7: Incident Logging
 - [ ] **Task 7.1** — Create Incidents API routes (`app/api/incidents/route.js` + `app/api/incidents/[incidentId]/route.js`)
