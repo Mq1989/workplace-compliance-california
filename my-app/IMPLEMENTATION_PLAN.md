@@ -50,7 +50,7 @@
 - [x] **Task 9.2** — Build Training dashboard page (`app/(dashboard)/training/page.js`) and records page (`app/(dashboard)/training/records/page.js`)
 
 ## Phase 10: Webhooks & Email
-- [ ] **Task 10.1** — Create Clerk webhook handler (`app/api/webhooks/clerk/route.js`)
+- [x] **Task 10.1** — Create Clerk webhook handler (`app/api/webhooks/clerk/route.js`)
 - [ ] **Task 10.2** — Create email service (`lib/email/sendReminder.js`) and cron reminder route (`app/api/cron/reminders/route.js`)
 
 ## Phase 11: Stripe Billing
