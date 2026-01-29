@@ -51,7 +51,7 @@
 
 ## Phase 10: Webhooks & Email
 - [x] **Task 10.1** — Create Clerk webhook handler (`app/api/webhooks/clerk/route.js`)
-- [ ] **Task 10.2** — Create email service (`lib/email/sendReminder.js`) and cron reminder route (`app/api/cron/reminders/route.js`)
+- [x] **Task 10.2** — Create email service (`lib/email/sendReminder.js`) and cron reminder route (`app/api/cron/reminders/route.js`)
 
 ## Phase 11: Stripe Billing
 - [ ] **Task 11.1** — Create Stripe webhook handler (`app/api/webhooks/stripe/route.js`)
