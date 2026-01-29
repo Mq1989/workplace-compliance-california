@@ -55,7 +55,7 @@
 
 ## Phase 11: Stripe Billing
 - [x] **Task 11.1** — Create Stripe webhook handler (`app/api/webhooks/stripe/route.js`)
-- [ ] **Task 11.2** — Build billing page (`app/(dashboard)/billing/page.js`)
+- [x] **Task 11.2** — Build billing page (`app/(dashboard)/billing/page.js`)
 
 ## Phase 12: Settings & Polish
 - [ ] **Task 12.1** — Build settings page (`app/(dashboard)/settings/page.js`)
