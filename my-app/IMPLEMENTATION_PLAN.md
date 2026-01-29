@@ -43,7 +43,7 @@
 ## Phase 8: Employee Management
 - [x] **Task 8.1** — Create Employees API routes (`app/api/employees/route.js` + `app/api/employees/[employeeId]/route.js`)
 - [x] **Task 8.2** — Build Employee roster page (`app/(dashboard)/employees/page.js`) + add form (`components/forms/EmployeeForm.js`)
-- [ ] **Task 8.3** — Build Employee detail page (`app/(dashboard)/employees/[employeeId]/page.js`)
+- [x] **Task 8.3** — Build Employee detail page (`app/(dashboard)/employees/[employeeId]/page.js`)
 
 ## Phase 9: Training Records
 - [ ] **Task 9.1** — Create Training API routes (`app/api/training/route.js`)
