@@ -28,8 +28,8 @@
 - [x] **Task 4.5** — Build Plan view/edit page (`app/(dashboard)/plans/[planId]/page.js`)
 
 ## Phase 5: PDF Generation
-- [ ] **Task 5.1** — Implement `lib/pdf/generateWVPP.js` with full WVPP document generation
-- [ ] **Task 5.2** — Create PDF export API route (`app/api/plans/[planId]/pdf/route.js`)
+- [x] **Task 5.1** — Implement `lib/pdf/generateWVPP.js` with full WVPP document generation
+- [x] **Task 5.2** — Create PDF export API route (`app/api/plans/[planId]/pdf/route.js`)
 
 ## Phase 6: Dashboard
 - [ ] **Task 6.1** — Build dashboard home page (`app/(dashboard)/dashboard/page.js`) with compliance score, upcoming deadlines, recent activity, quick actions
