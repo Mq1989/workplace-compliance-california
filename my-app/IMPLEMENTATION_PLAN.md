@@ -2,7 +2,7 @@
 
 ## Phase 0: Project Foundation
 - [x] **Task 0.1** — Install dependencies and configure project (Clerk, Mongoose, shadcn/ui, jsPDF, Resend, Stripe, react-hook-form, zod, lucide-react, class-variance-authority, clsx, tailwind-merge, tailwindcss-animate)
-- [ ] **Task 0.2** — Create constants file (`constants/index.js`) with all enums, industry data, subscription plans
+- [x] **Task 0.2** — Create constants file (`constants/index.js`) with all enums, industry data, subscription plans
 - [ ] **Task 0.3** — Create shared UI components: set up shadcn/ui component primitives (Button, Input, Label, Card, Select, Checkbox, Switch, Tabs, Dialog, Toast, Progress, RadioGroup, Separator, DropdownMenu)
 - [x] **Task 0.4** — Create `lib/utils.js` with `cn()` helper for Tailwind class merging
 

@@ -23,3 +23,4 @@
 - **Path aliases**: `@/*` maps to project root via `jsconfig.json`.
 - **Dark mode**: Class-based via `@custom-variant dark (&:is(.dark *))`. Toggle on `<html class="dark">`.
 - **Component library**: Radix UI primitives installed for building shadcn/ui-style components in `components/ui/`.
+- **Constants**: All enums, industry hazard data, and subscription plan definitions live in `constants/index.js`. Import from `@/constants` using named exports.
