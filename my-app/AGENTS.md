@@ -24,3 +24,4 @@
 - **Dark mode**: Class-based via `@custom-variant dark (&:is(.dark *))`. Toggle on `<html class="dark">`.
 - **Component library**: Radix UI primitives installed for building shadcn/ui-style components in `components/ui/`.
 - **Constants**: All enums, industry hazard data, and subscription plan definitions live in `constants/index.js`. Import from `@/constants` using named exports.
+- **UI components**: All shadcn/ui primitives live in `components/ui/`. Import like `import { Button } from "@/components/ui/button"`. Components that use Radix interactivity (Select, Checkbox, Switch, Tabs, Dialog, Toast, Progress, RadioGroup, Separator, DropdownMenu) are marked `"use client"`. Button, Input, Label, Card, Textarea are server-compatible (no `"use client"` directive). Also includes a Textarea component as a bonus beyond the original 14.
