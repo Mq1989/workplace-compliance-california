@@ -46,7 +46,7 @@
 - [x] **Task 8.3** — Build Employee detail page (`app/(dashboard)/employees/[employeeId]/page.js`)
 
 ## Phase 9: Training Records
-- [ ] **Task 9.1** — Create Training API routes (`app/api/training/route.js`)
+- [x] **Task 9.1** — Create Training API routes (`app/api/training/route.js`)
 - [ ] **Task 9.2** — Build Training dashboard page (`app/(dashboard)/training/page.js`) and records page (`app/(dashboard)/training/records/page.js`)
 
 ## Phase 10: Webhooks & Email
