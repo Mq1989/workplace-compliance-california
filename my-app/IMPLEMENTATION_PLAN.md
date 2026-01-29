@@ -1,10 +1,10 @@
 # Implementation Plan — SafeWorkCA
 
 ## Phase 0: Project Foundation
-- [ ] **Task 0.1** — Install dependencies and configure project (Clerk, Mongoose, shadcn/ui, jsPDF, Resend, Stripe, react-hook-form, zod, lucide-react, class-variance-authority, clsx, tailwind-merge, tailwindcss-animate)
+- [x] **Task 0.1** — Install dependencies and configure project (Clerk, Mongoose, shadcn/ui, jsPDF, Resend, Stripe, react-hook-form, zod, lucide-react, class-variance-authority, clsx, tailwind-merge, tailwindcss-animate)
 - [ ] **Task 0.2** — Create constants file (`constants/index.js`) with all enums, industry data, subscription plans
 - [ ] **Task 0.3** — Create shared UI components: set up shadcn/ui component primitives (Button, Input, Label, Card, Select, Checkbox, Switch, Tabs, Dialog, Toast, Progress, RadioGroup, Separator, DropdownMenu)
-- [ ] **Task 0.4** — Create `lib/utils.js` with `cn()` helper for Tailwind class merging
+- [x] **Task 0.4** — Create `lib/utils.js` with `cn()` helper for Tailwind class merging
 
 ## Phase 1: Authentication & Database
 - [ ] **Task 1.1** — Configure Clerk: install, add environment variables, create `middleware.js`, wrap root layout with `ClerkProvider`, create sign-in and sign-up pages
