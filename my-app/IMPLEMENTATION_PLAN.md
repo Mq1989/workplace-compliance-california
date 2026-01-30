@@ -78,7 +78,7 @@
 
 ## Phase 16: AI Q&A Chatbot
 - [x] **Task 16.1** — Install OpenAI SDK, create AI utilities: `lib/openai/client.js`, `lib/openai/buildSystemPrompt.js`, `lib/openai/classifyComplexity.js`
-- [ ] **Task 16.2** — Create Chat API routes: `app/api/chat/message/route.js` (POST), `app/api/chat/conversations/route.js` (GET), `app/api/chat/conversations/[id]/route.js` (GET), `app/api/chat/flagged/route.js` (GET), `app/api/chat/flagged/[id]/review/route.js` (PUT)
+- [x] **Task 16.2** — Create Chat API routes: `app/api/chat/message/route.js` (POST), `app/api/chat/conversations/route.js` (GET), `app/api/chat/conversations/[id]/route.js` (GET), `app/api/chat/flagged/route.js` (GET), `app/api/chat/flagged/[id]/review/route.js` (PUT)
 - [ ] **Task 16.3** — Build chat interface (`app/(portal)/portal/chat/page.js`) with ChatInterface, ChatMessage, ChatInput components
 - [ ] **Task 16.4** — Build flagged Q&A review page (`app/(dashboard)/training/qa-review/page.js`)
 
