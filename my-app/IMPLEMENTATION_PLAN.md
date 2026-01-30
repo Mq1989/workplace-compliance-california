@@ -89,7 +89,7 @@
 - [x] **Task 17.4** — Build admin anonymous reports dashboard (`app/(dashboard)/anonymous-reports/page.js`) + detail page (`app/(dashboard)/anonymous-reports/[reportId]/page.js`)
 
 ## Phase 18: Document Generation & Employee Invite Flow
-- [ ] **Task 18.1** — Create Clerk invite utility (`lib/clerk/inviteEmployee.js`) and integrate with employee creation API
+- [x] **Task 18.1** — Create Clerk invite utility (`lib/clerk/inviteEmployee.js`) and integrate with employee creation API
 - [ ] **Task 18.2** — Create document generation utilities: training certificate (`lib/pdf/generateTrainingCertificate.js`), incident log export (`lib/pdf/generateIncidentLog.js`), compliance report (`lib/pdf/generateComplianceReport.js`)
 - [ ] **Task 18.3** — Create Documents API routes and documents page (`app/(dashboard)/documents/page.js`)
 
