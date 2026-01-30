@@ -79,7 +79,6 @@ const AnonymousReportSchema = new mongoose.Schema({
 });
 
 AnonymousReportSchema.index({ organizationId: 1, status: 1 });
-AnonymousReportSchema.index({ anonymousId: 1 });
 
 // Static method to hash access token
 AnonymousReportSchema.statics.hashToken = function(token) {

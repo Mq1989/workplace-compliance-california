@@ -9,7 +9,8 @@ const isPublicRoute = createRouteMatcher([
   '/api/anonymous/submit',
   '/api/anonymous/status',
   '/api/anonymous/respond',
-  '/anonymous(.*)',
+  '/anonymous',
+  '/anonymous/status',
 ]);
 
 export default clerkMiddleware(async (auth, request) => {
