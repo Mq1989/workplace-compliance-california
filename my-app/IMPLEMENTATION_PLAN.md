@@ -94,6 +94,6 @@
 - [x] **Task 18.3** — Create Documents API routes and documents page (`app/(dashboard)/documents/page.js`)
 
 ## Phase 19: Integration & Polish
-- [ ] **Task 19.1** — Update compliance dashboard API and page to include LMS, Q&A, and anonymous report data
+- [x] **Task 19.1** — Update compliance dashboard API and page to include LMS, Q&A, and anonymous report data
 - [ ] **Task 19.2** — Update sidebar navigation to include Anonymous Reports link, update proxy.js for public anonymous routes
 - [ ] **Task 19.3** — Final QA: ensure build passes, lint clean, all new pages render, all new API routes respond
