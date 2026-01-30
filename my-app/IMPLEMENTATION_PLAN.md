@@ -74,7 +74,7 @@
 - [x] **Task 15.1** — Create LMS API routes: `app/api/training/modules/route.js` (GET list), `app/api/training/modules/[moduleId]/route.js` (GET with questions), `app/api/training/progress/route.js` (GET employee progress), `app/api/training/progress/video/route.js` (POST update), `app/api/training/progress/quiz/route.js` (POST submit quiz), `app/api/training/complete/route.js` (POST mark complete), `app/api/training/assign/route.js` (POST assign training), `app/api/training/reports/route.js` (GET completion reports)
 - [x] **Task 15.2** — Build training path UI (`app/(portal)/portal/training/page.js`) with sequential module list, progress bar, locked/unlocked states
 - [x] **Task 15.3** — Build module player page (`app/(portal)/portal/training/[moduleId]/page.js`) with video player component, progress tracking, quiz component
-- [ ] **Task 15.4** — Build admin training management: module management page (`app/(dashboard)/training/modules/page.js`), completion reports page update, assign training UI
+- [x] **Task 15.4** — Build admin training management: module management page (`app/(dashboard)/training/modules/page.js`), completion reports page update, assign training UI
 
 ## Phase 16: AI Q&A Chatbot
 - [ ] **Task 16.1** — Install OpenAI SDK, create AI utilities: `lib/openai/client.js`, `lib/openai/buildSystemPrompt.js`, `lib/openai/classifyComplexity.js`
