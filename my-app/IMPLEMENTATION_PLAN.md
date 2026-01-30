@@ -66,7 +66,7 @@
 - [x] **Task 13.2** — Create seed script (`lib/seed/trainingModules.js`) with 6 default training modules and sample quiz questions per PRD section 5.2
 
 ## Phase 14: Employee Portal Layout & Welcome
-- [ ] **Task 14.1** — Build portal layout (`app/(portal)/layout.js`) with employee-focused navigation (Training, Q&A, WVPP, Documents) and Clerk UserButton
+- [x] **Task 14.1** — Build portal layout (`app/(portal)/layout.js`) with employee-focused navigation (Training, Q&A, WVPP, Documents) and Clerk UserButton
 - [ ] **Task 14.2** — Build portal dashboard (`app/(portal)/portal/page.js`) showing training progress, quick links
 - [ ] **Task 14.3** — Build welcome page (`app/(portal)/welcome/page.js`) for post-invite landing
 
