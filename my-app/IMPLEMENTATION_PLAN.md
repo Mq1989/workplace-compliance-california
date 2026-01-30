@@ -63,7 +63,7 @@
 
 ## Phase 13: New Data Models & Schema Updates
 - [x] **Task 13.1** — Create new Mongoose models: TrainingModule, TrainingQuestion, TrainingProgress, ChatMessage, AnonymousReport, AnonymousThread, Document, Reminder (per PRD sections 4.1–4.8). Update Employee model with invite/portal/LMS fields (PRD 4.9). Update Organization model with settings, complianceScore, wvppContent fields (PRD 4.9). Update AuditLog action enum with new action types.
-- [ ] **Task 13.2** — Create seed script (`lib/seed/trainingModules.js`) with 6 default training modules and sample quiz questions per PRD section 5.2
+- [x] **Task 13.2** — Create seed script (`lib/seed/trainingModules.js`) with 6 default training modules and sample quiz questions per PRD section 5.2
 
 ## Phase 14: Employee Portal Layout & Welcome
 - [ ] **Task 14.1** — Build portal layout (`app/(portal)/layout.js`) with employee-focused navigation (Training, Q&A, WVPP, Documents) and Clerk UserButton
