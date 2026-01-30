@@ -4,6 +4,7 @@ import dbConnect from '@/lib/db';
 import Organization from '@/lib/models/Organization';
 import Employee from '@/lib/models/Employee';
 import AuditLog from '@/lib/models/AuditLog';
+import { inviteEmployeeToOrg } from '@/lib/clerk/inviteEmployee';
 
 export async function GET(request) {
   try {
@@ -72,10 +73,11 @@ export async function POST(request) {
     }
 
     const data = await request.json();
+    const { sendInvite = true, ...employeeData } = data;
 
     const employee = await Employee.create({
       organizationId: organization._id,
-      ...data
+      ...employeeData
     });
 
     await AuditLog.create({
@@ -90,6 +92,41 @@ export async function POST(request) {
         role: employee.role
       }
     });
+
+    // Send Clerk organization invite if requested and org has a Clerk org ID
+    if (sendInvite && organization.clerkOrgId) {
+      try {
+        const clerkRole = employee.role === 'owner' || employee.role === 'manager' || employee.role === 'wvpp_administrator'
+          ? 'org:admin'
+          : 'org:member';
+
+        await inviteEmployeeToOrg({
+          email: employee.email,
+          orgId: organization.clerkOrgId,
+          role: clerkRole,
+          inviterUserId: userId,
+        });
+
+        employee.inviteStatus = 'sent';
+        employee.inviteSentAt = new Date();
+        await employee.save();
+
+        await AuditLog.create({
+          organizationId: organization._id,
+          userId,
+          action: 'employee_invited',
+          resourceType: 'employee',
+          resourceId: employee._id,
+          details: {
+            email: employee.email,
+            clerkRole,
+          }
+        });
+      } catch (inviteError) {
+        // Employee is created but invite failed — leave inviteStatus as 'pending'
+        console.error('Clerk invite failed for employee:', employee.email, inviteError.message);
+      }
+    }
 
     return NextResponse.json(employee, { status: 201 });
   } catch (error) {
