@@ -9,6 +9,7 @@ import {
   GraduationCap,
   AlertTriangle,
   Users,
+  ShieldQuestion,
   Settings,
   CreditCard,
   Menu,
@@ -26,6 +27,7 @@ const navItems = [
   { href: "/training", label: "Training", icon: GraduationCap },
   { href: "/incidents", label: "Incidents", icon: AlertTriangle },
   { href: "/employees", label: "Employees", icon: Users },
+  { href: "/anonymous-reports", label: "Anonymous Reports", icon: ShieldQuestion },
 ];
 
 const bottomNavItems = [
