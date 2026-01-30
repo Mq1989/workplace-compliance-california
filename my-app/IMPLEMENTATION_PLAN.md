@@ -67,7 +67,7 @@
 
 ## Phase 14: Employee Portal Layout & Welcome
 - [x] **Task 14.1** — Build portal layout (`app/(portal)/layout.js`) with employee-focused navigation (Training, Q&A, WVPP, Documents) and Clerk UserButton
-- [ ] **Task 14.2** — Build portal dashboard (`app/(portal)/portal/page.js`) showing training progress, quick links
+- [x] **Task 14.2** — Build portal dashboard (`app/(portal)/portal/page.js`) showing training progress, quick links
 - [ ] **Task 14.3** — Build welcome page (`app/(portal)/welcome/page.js`) for post-invite landing
 
 ## Phase 15: LMS Training Path & Video Player
