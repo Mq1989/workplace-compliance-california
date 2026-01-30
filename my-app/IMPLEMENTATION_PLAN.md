@@ -68,7 +68,7 @@
 ## Phase 14: Employee Portal Layout & Welcome
 - [x] **Task 14.1** — Build portal layout (`app/(portal)/layout.js`) with employee-focused navigation (Training, Q&A, WVPP, Documents) and Clerk UserButton
 - [x] **Task 14.2** — Build portal dashboard (`app/(portal)/portal/page.js`) showing training progress, quick links
-- [ ] **Task 14.3** — Build welcome page (`app/(portal)/welcome/page.js`) for post-invite landing
+- [x] **Task 14.3** — Build welcome page (`app/(portal)/welcome/page.js`) for post-invite landing
 
 ## Phase 15: LMS Training Path & Video Player
 - [ ] **Task 15.1** — Create LMS API routes: `app/api/training/modules/route.js` (GET list), `app/api/training/modules/[moduleId]/route.js` (GET with questions), `app/api/training/progress/route.js` (GET employee progress), `app/api/training/progress/video/route.js` (POST update), `app/api/training/progress/quiz/route.js` (POST submit quiz), `app/api/training/complete/route.js` (POST mark complete), `app/api/training/assign/route.js` (POST assign training), `app/api/training/reports/route.js` (GET completion reports)
