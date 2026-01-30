@@ -50,6 +50,33 @@ const OrganizationSchema = new mongoose.Schema({
   },
   planExpiresAt: Date,
 
+  // Compliance settings
+  settings: {
+    trainingReminderDays: { type: [Number], default: [30, 7, 1] },
+    autoAssignTraining: { type: Boolean, default: true },
+    requireQuizPass: { type: Boolean, default: true },
+    quizPassingScore: { type: Number, default: 70 },
+    qaResponseEmail: String,
+    timezone: { type: String, default: 'America/Los_Angeles' },
+    enableAIQA: { type: Boolean, default: true },
+    aiReviewThreshold: { type: String, default: 'complex' }
+  },
+
+  // Compliance scores (cached)
+  complianceScore: {
+    overall: { type: Number, default: 0 },
+    training: { type: Number, default: 0 },
+    planCurrent: { type: Number, default: 0 },
+    incidentLog: { type: Number, default: 0 },
+    lastCalculated: Date
+  },
+
+  // AI Q&A context — store WVPP content for RAG
+  wvppContent: {
+    lastUpdated: Date,
+    contentHash: String
+  },
+
   // Compliance tracking
   wvppCreatedAt: Date,
   lastTrainingDate: Date,

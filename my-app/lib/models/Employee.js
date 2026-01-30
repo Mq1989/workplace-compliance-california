@@ -9,6 +9,18 @@ const EmployeeSchema = new mongoose.Schema({
   },
   clerkUserId: { type: String, sparse: true },
 
+  // Clerk invite integration
+  inviteStatus: {
+    type: String,
+    enum: ['pending', 'sent', 'accepted', 'expired'],
+    default: 'pending'
+  },
+  inviteSentAt: Date,
+  inviteAcceptedAt: Date,
+
+  // Portal access
+  lastPortalLogin: Date,
+
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   email: { type: String, required: true },
@@ -30,6 +42,17 @@ const EmployeeSchema = new mongoose.Schema({
   initialTrainingCompletedAt: Date,
   lastAnnualTrainingCompletedAt: Date,
   nextTrainingDueDate: Date,
+
+  // LMS tracking
+  trainingPath: {
+    startedAt: Date,
+    completedAt: Date,
+    currentModuleOrder: { type: Number, default: 1 }
+  },
+
+  // Q&A tracking for compliance
+  hasCompletedQA: { type: Boolean, default: false },
+  qaCompletedAt: Date,
 
   // Plan acknowledgment
   wvppAcknowledgedAt: Date,

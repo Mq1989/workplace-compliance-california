@@ -23,14 +23,29 @@ const AuditLogSchema = new mongoose.Schema({
       'employee_updated',
       'employee_removed',
       'document_exported',
-      'settings_changed'
+      'settings_changed',
+      'pdf_generated',
+      'training_module_created',
+      'training_module_updated',
+      'training_assigned',
+      'quiz_submitted',
+      'video_progress_updated',
+      'chat_message_sent',
+      'chat_message_flagged',
+      'chat_message_reviewed',
+      'anonymous_report_submitted',
+      'anonymous_report_updated',
+      'anonymous_report_responded',
+      'employee_invited',
+      'document_generated',
+      'reminder_sent'
     ],
     required: true
   },
 
   resourceType: {
     type: String,
-    enum: ['plan', 'incident', 'employee', 'training', 'organization'],
+    enum: ['plan', 'incident', 'employee', 'training', 'organization', 'chat', 'anonymous_report', 'document', 'reminder', 'training_module'],
     required: true
   },
   resourceId: {
