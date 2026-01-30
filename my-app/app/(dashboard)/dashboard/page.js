@@ -28,6 +28,11 @@ import {
   Info,
   CheckCircle2,
   Loader2,
+  MessageSquareWarning,
+  Eye,
+  BookOpen,
+  Bot,
+  ShieldQuestion,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -41,9 +46,20 @@ const ACTION_LABELS = {
   training_completed: "Training completed",
   employee_added: "Employee added",
   employee_removed: "Employee removed",
+  employee_updated: "Employee updated",
+  employee_invited: "Employee invited",
   document_exported: "Document exported",
+  document_generated: "Document generated",
   settings_changed: "Settings changed",
   pdf_generated: "PDF generated",
+  training_assigned: "Training assigned",
+  quiz_submitted: "Quiz submitted",
+  chat_message_sent: "Q&A message sent",
+  chat_message_flagged: "Q&A response flagged",
+  chat_message_reviewed: "Flagged Q&A reviewed",
+  anonymous_report_submitted: "Anonymous report submitted",
+  anonymous_report_updated: "Anonymous report updated",
+  anonymous_report_responded: "Admin responded to report",
 };
 
 const RESOURCE_ICONS = {
@@ -52,6 +68,10 @@ const RESOURCE_ICONS = {
   employee: Users,
   training: GraduationCap,
   organization: ShieldCheck,
+  chat: Bot,
+  anonymous_report: ShieldQuestion,
+  document: FileText,
+  training_module: BookOpen,
 };
 
 function formatDate(dateStr) {
@@ -382,6 +402,84 @@ export default function DashboardPage() {
             </div>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardContent className="flex items-center gap-4 p-4">
+            <div className="rounded-lg bg-indigo-50 p-2 dark:bg-indigo-950/50">
+              <BookOpen className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">
+                {stats.completedModuleProgress}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Module{stats.completedModuleProgress !== 1 ? "s" : ""} Completed
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="flex items-center gap-4 p-4">
+            <div className={cn(
+              "rounded-lg p-2",
+              stats.pendingFlaggedQA > 0
+                ? "bg-red-50 dark:bg-red-950/50"
+                : "bg-orange-50 dark:bg-orange-950/50"
+            )}>
+              <MessageSquareWarning className={cn(
+                "h-5 w-5",
+                stats.pendingFlaggedQA > 0
+                  ? "text-red-600 dark:text-red-400"
+                  : "text-orange-600 dark:text-orange-400"
+              )} />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{stats.pendingFlaggedQA}</p>
+              <p className="text-xs text-muted-foreground">
+                Flagged Q&A Pending
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="flex items-center gap-4 p-4">
+            <div className={cn(
+              "rounded-lg p-2",
+              stats.newAnonymousReports > 0
+                ? "bg-red-50 dark:bg-red-950/50"
+                : "bg-teal-50 dark:bg-teal-950/50"
+            )}>
+              <ShieldQuestion className={cn(
+                "h-5 w-5",
+                stats.newAnonymousReports > 0
+                  ? "text-red-600 dark:text-red-400"
+                  : "text-teal-600 dark:text-teal-400"
+              )} />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{stats.newAnonymousReports}</p>
+              <p className="text-xs text-muted-foreground">
+                New Anonymous Report{stats.newAnonymousReports !== 1 ? "s" : ""}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="flex items-center gap-4 p-4">
+            <div className="rounded-lg bg-cyan-50 p-2 dark:bg-cyan-950/50">
+              <Bot className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{stats.totalChatMessages}</p>
+              <p className="text-xs text-muted-foreground">
+                Q&A Question{stats.totalChatMessages !== 1 ? "s" : ""} Asked
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Bottom row: Deadlines + Recent Activity + Quick Actions */}
@@ -510,10 +608,36 @@ export default function DashboardPage() {
               className="w-full justify-between"
               asChild
             >
-              <Link href="/plans/new">
+              <Link href="/training/qa-review">
                 <span className="flex items-center gap-2">
-                  <FileText className="h-4 w-4" />
-                  Create New Plan
+                  <MessageSquareWarning className="h-4 w-4" />
+                  View Flagged Q&A
+                </span>
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-between"
+              asChild
+            >
+              <Link href="/anonymous-reports">
+                <span className="flex items-center gap-2">
+                  <Eye className="h-4 w-4" />
+                  Anonymous Reports
+                </span>
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-between"
+              asChild
+            >
+              <Link href="/documents">
+                <span className="flex items-center gap-2">
+                  <Download className="h-4 w-4" />
+                  Export Compliance Report
                 </span>
                 <ChevronRight className="h-4 w-4" />
               </Link>
@@ -526,7 +650,7 @@ export default function DashboardPage() {
               >
                 <Link href="/plans">
                   <span className="flex items-center gap-2">
-                    <Download className="h-4 w-4" />
+                    <FileText className="h-4 w-4" />
                     View WVPP
                   </span>
                   <ChevronRight className="h-4 w-4" />

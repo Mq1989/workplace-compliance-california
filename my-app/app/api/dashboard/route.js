@@ -6,6 +6,10 @@ import Plan from '@/lib/models/Plan';
 import Incident from '@/lib/models/Incident';
 import Employee from '@/lib/models/Employee';
 import AuditLog from '@/lib/models/AuditLog';
+import TrainingProgress from '@/lib/models/TrainingProgress';
+import TrainingModule from '@/lib/models/TrainingModule';
+import ChatMessage from '@/lib/models/ChatMessage';
+import AnonymousReport from '@/lib/models/AnonymousReport';
 
 export async function GET() {
   try {
@@ -34,7 +38,16 @@ export async function GET() {
       totalEmployees,
       activeEmployees,
       trainedEmployees,
-      recentActivity
+      recentActivity,
+      totalModules,
+      completedProgressCount,
+      inProgressCount,
+      flaggedQACount,
+      pendingFlaggedQACount,
+      totalChatMessages,
+      totalAnonymousReports,
+      newAnonymousReports,
+      activeAnonymousReports
     ] = await Promise.all([
       Plan.findOne({ organizationId: orgObjectId, status: 'active' }),
       Plan.countDocuments({ organizationId: orgObjectId }),
@@ -53,7 +66,34 @@ export async function GET() {
       AuditLog.find({ organizationId: orgObjectId })
         .sort({ createdAt: -1 })
         .limit(10)
-        .lean()
+        .lean(),
+      // LMS data
+      TrainingModule.countDocuments({ isActive: true }),
+      TrainingProgress.countDocuments({ organizationId: orgObjectId, status: 'completed' }),
+      TrainingProgress.countDocuments({ organizationId: orgObjectId, status: 'in_progress' }),
+      // Q&A data
+      ChatMessage.countDocuments({
+        organizationId: orgObjectId,
+        role: 'assistant',
+        'aiMetadata.flaggedForReview': true
+      }),
+      ChatMessage.countDocuments({
+        organizationId: orgObjectId,
+        role: 'assistant',
+        'aiMetadata.flaggedForReview': true,
+        'aiMetadata.reviewedAt': { $exists: false }
+      }),
+      ChatMessage.countDocuments({
+        organizationId: orgObjectId,
+        role: 'user'
+      }),
+      // Anonymous reports data
+      AnonymousReport.countDocuments({ organizationId: orgObjectId }),
+      AnonymousReport.countDocuments({ organizationId: orgObjectId, status: 'new' }),
+      AnonymousReport.countDocuments({
+        organizationId: orgObjectId,
+        status: { $in: ['under_review', 'investigating'] }
+      })
     ]);
 
     // Calculate compliance score
@@ -165,6 +205,18 @@ export async function GET() {
         message: `${untrained} employee${untrained > 1 ? 's' : ''} have not completed training.`
       });
     }
+    if (pendingFlaggedQACount > 0) {
+      alerts.push({
+        level: 'critical',
+        message: `${pendingFlaggedQACount} flagged Q&A response${pendingFlaggedQACount > 1 ? 's' : ''} pending review.`
+      });
+    }
+    if (newAnonymousReports > 0) {
+      alerts.push({
+        level: 'critical',
+        message: `${newAnonymousReports} new anonymous report${newAnonymousReports > 1 ? 's' : ''} require attention.`
+      });
+    }
     for (const d of deadlines) {
       if (d.overdue) {
         alerts.push({ level: 'critical', message: `${d.label} is overdue.` });
@@ -194,7 +246,19 @@ export async function GET() {
         openIncidents,
         totalEmployees,
         activeEmployees,
-        trainedEmployees
+        trainedEmployees,
+        // LMS stats
+        totalModules,
+        completedModuleProgress: completedProgressCount,
+        inProgressModuleProgress: inProgressCount,
+        // Q&A stats
+        totalChatMessages,
+        flaggedQA: flaggedQACount,
+        pendingFlaggedQA: pendingFlaggedQACount,
+        // Anonymous reports stats
+        totalAnonymousReports,
+        newAnonymousReports,
+        activeAnonymousReports
       },
       alerts,
       deadlines,
