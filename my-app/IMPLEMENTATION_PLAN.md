@@ -84,7 +84,7 @@
 
 ## Phase 17: Anonymous Reporting
 - [x] **Task 17.1** — Create Anonymous API routes: `app/api/anonymous/submit/route.js` (POST public), `app/api/anonymous/status/route.js` (POST public), `app/api/anonymous/respond/route.js` (POST public), `app/api/anonymous/reports/route.js` (GET admin), `app/api/anonymous/reports/[id]/route.js` (GET/PUT admin), `app/api/anonymous/reports/[id]/question/route.js` (POST admin)
-- [ ] **Task 17.2** — Build public anonymous report form (`app/(public)/anonymous/page.js`) + confirmation with access token display
+- [x] **Task 17.2** — Build public anonymous report form (`app/(public)/anonymous/page.js`) + confirmation with access token display
 - [ ] **Task 17.3** — Build public status checker (`app/(public)/anonymous/status/page.js`) with token verification + thread view
 - [ ] **Task 17.4** — Build admin anonymous reports dashboard (`app/(dashboard)/anonymous-reports/page.js`) + detail page (`app/(dashboard)/anonymous-reports/[reportId]/page.js`)
 
